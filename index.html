@@ -4,55 +4,83 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Юлия Карло — AI-продукты для сложных рабочих процессов</title>
-  <meta name="description" content="Юлия Карло создаёт AI-продукты для сложных рабочих процессов: Verifix — мониторинг договоров, модуль массового распознавания документов. Открыта к ролям PM и к проектной работе.">
+  <meta name="description" content="Юлия Карло: продуктовый дизайн → Product Management. Создаю AI-продукты для сложных рабочих процессов. Verifix — мониторинг договоров; Matrix — рабочая таблица документов внутри продукта. Открыта к ролям PM в AI и B2B.">
+  <meta name="theme-color" content="#e4e5df">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css?v=15">
+  <link rel="stylesheet" href="styles.css?v=17">
 </head>
 <body>
   <a class="skip" href="#hero">К содержанию</a>
 
-  <nav class="spine" aria-label="Разделы">
+  <nav class="spine" aria-label="Разделы страницы">
     <span class="spine-mark" aria-hidden="true"></span>
-    <a href="#hero" data-index="0">01</a>
-    <a href="#cases" data-index="1">02</a>
-    <a href="#verifix" data-index="2">03</a>
-    <a href="#docs" data-index="3">04</a>
-    <a href="#about" data-index="4">05</a>
-    <a href="#contact" data-index="5">06</a>
+    <a href="#hero" data-index="0" aria-label="01 Профиль">
+      <span class="spine-num" aria-hidden="true">01</span>
+      <span class="spine-name">Профиль</span>
+    </a>
+    <a href="#cases" data-index="1" aria-label="02 Кейсы">
+      <span class="spine-num" aria-hidden="true">02</span>
+      <span class="spine-name">Кейсы</span>
+    </a>
+    <a href="#verifix" data-index="2" aria-label="03 Verifix">
+      <span class="spine-num" aria-hidden="true">03</span>
+      <span class="spine-name">Verifix</span>
+    </a>
+    <a href="#matrix" data-index="3" aria-label="04 Matrix">
+      <span class="spine-num" aria-hidden="true">04</span>
+      <span class="spine-name">Matrix</span>
+    </a>
+    <a href="#about" data-index="4" aria-label="05 Опыт">
+      <span class="spine-num" aria-hidden="true">05</span>
+      <span class="spine-name">Опыт</span>
+    </a>
+    <a href="#contact" data-index="5" aria-label="06 Контакт">
+      <span class="spine-num" aria-hidden="true">06</span>
+      <span class="spine-name">Контакт</span>
+    </a>
   </nav>
 
   <main>
-    <section id="hero" class="hero" aria-labelledby="brand-name">
+    <section id="hero" class="hero" aria-labelledby="hero-claim">
+      <div class="hero-atmosphere" aria-hidden="true"></div>
+
       <div class="hero-copy">
-        <p class="claim reveal" style="--d:0">
-          <span>Создаю AI-продукты</span>
+        <p class="hero-kicker reveal" style="--d:0">AI · B2B · Product</p>
+        <h1 class="claim reveal" id="hero-claim" style="--d:1">
+          <span>Создаю <em>AI-продукты</em></span>
           <span>для сложных</span>
           <span>рабочих процессов</span>
-        </p>
-        <p class="lede reveal" style="--d:1">Беру запутанный операционный процесс, нахожу полезный первый сценарий и довожу его до использования. Соединяю исследования, продуктовый дизайн и разработку с AI — с заказчиком напрямую или в продуктовой команде.</p>
-        <p class="actions reveal" style="--d:2">
-          <a class="action" href="#cases">Смотреть кейсы <span aria-hidden="true">→</span></a>
-          <a class="action action-quiet" href="#contact">Обсудить задачу</a>
-        </p>
-        <p class="footnote reveal" style="--d:3">Открыта к ролям Product Manager в AI и B2B — и к проектной работе над продуктом под ключ.</p>
+        </h1>
+
+        <div class="hero-panel reveal" style="--d:2">
+          <p class="lede">Соединяю UX-исследования, продуктовую проработку и разработку с AI-инструментами. В Verifix работаю напрямую с заказчиком и создаю систему мониторинга договоров вместе с дизайнером и специалистом по&nbsp;1С.</p>
+          <p class="proof">Оплаченная разработка · Несколько пользователей · Развитие по обратной связи</p>
+          <p class="actions">
+            <a class="action" href="#cases">Смотреть кейсы <span aria-hidden="true">→</span></a>
+            <a class="action action-quiet" href="#contact">Связаться</a>
+          </p>
+          <p class="footnote">Открыта к ролям Product Manager в AI и B2B. Также рассматриваю проектную работу.</p>
+        </div>
       </div>
 
-      <aside class="hero-stage reveal-stage">
+      <aside class="hero-stage reveal-stage" aria-label="Юлия Карло">
         <figure class="portrait-plate">
-          <img
-            src="media/julia.jpg"
-            alt=""
-            width="768"
-            height="1024"
-            decoding="async"
-            fetchpriority="high">
+          <div class="portrait-frame">
+            <img
+              src="media/julia.jpg"
+              alt="Портрет Юлии Карло"
+              width="768"
+              height="1024"
+              decoding="async"
+              fetchpriority="high">
+          </div>
           <figcaption>
-            <h1 class="brand" id="brand-name">Юлия Карло</h1>
-            <p class="plate-focus">AI-продукты · B2B</p>
-            <p class="plate-role">PM / продукт под ключ</p>
+            <p class="brand"><span class="brand-first">Юлия</span> <em class="brand-last">Карло</em></p>
+            <p class="plate-focus">AI · B2B</p>
+            <p class="plate-role">Продуктовый дизайн → Product Management</p>
           </figcaption>
         </figure>
       </aside>
@@ -61,22 +89,20 @@
     <section id="cases" class="block cases" aria-labelledby="cases-title">
       <div class="block-head">
         <p class="index">02</p>
-        <h2 id="cases-title">Два продукта в работе</h2>
-        <p class="block-lede">Оба кейса — про ручную проверку, которую нельзя просто «отдать модели». Нужно понять процесс, выбрать границы автоматизации и оставить человеку то, где без него нельзя.</p>
+        <h2 id="cases-title">Избранные кейсы</h2>
+        <p class="block-lede">Два масштаба продуктовой работы: разработка Verifix с нуля и развитие Matrix — фичи для работы с документами внутри продукта.</p>
       </div>
       <div class="case-index" data-reveal-group>
         <a class="case-tile reveal-item" href="#verifix">
-          <p class="case-tile-meta"><span>01</span> B2B · AI · строительство</p>
-          <h3>Verifix</h3>
+          <p class="case-tile-meta">VERIFIX · B2B-продукт</p>
           <p class="case-tile-title">Мониторинг исполнения договоров</p>
-          <p>Реестр сигналов для кураторов СРО: что требует внимания, чего не хватает данных, где уже можно проверить исполнение.</p>
+          <p>Система для сотрудников строительной СРО: помогает выбрать договор для проверки, понять основание сигнала и изучить подтверждающие данные.</p>
           <span class="case-tile-go">Разбор кейса <span aria-hidden="true">→</span></span>
         </a>
-        <a class="case-tile reveal-item" href="#docs">
-          <p class="case-tile-meta"><span>02</span> B2B · AI · документы</p>
-          <h3>Модуль распознавания</h3>
-          <p class="case-tile-title">Массовый разбор документов по типу</p>
-          <p>Конвейер, который принимает поток файлов, определяет тип документа и готовит данные к проверке — вместо ручной сортировки пачки.</p>
+        <a class="case-tile reveal-item" href="#matrix">
+          <p class="case-tile-meta">MATRIX · Фича внутри Verifix</p>
+          <p class="case-tile-title">От списка файлов — к рабочей таблице</p>
+          <p>Пересмотрела сценарий работы с документами по договору: предложила группировку по типам и уточнила, какие сведения нужны сотруднику для проверки.</p>
           <span class="case-tile-go">Разбор кейса <span aria-hidden="true">→</span></span>
         </a>
       </div>
@@ -86,117 +112,149 @@
       <div class="block-head">
         <p class="index">03 · Verifix</p>
         <div class="case-top">
-          <h2 id="verifix-title">Какие договоры требуют внимания — и почему</h2>
+          <h2 id="verifix-title">Мониторинг исполнения договоров</h2>
           <div class="case-copy">
             <div class="prose">
-              <p>Чтобы проверить исполнение договора, куратору СРО нужно сопоставить сведения из 1С, ЕИС и документов. Важно понять, где есть риск, а где для вывода пока не хватает данных.</p>
+              <p>Чтобы проверить исполнение договора, сотруднику строительной СРО (саморегулируемой организации) нужно сопоставить сведения из&nbsp;1С, ЕИС (Единой информационной системы в сфере закупок) и документов. Важно понять, где есть риск, а где для вывода пока не хватает данных.</p>
               <p>Verifix собирает эти сведения в одном рабочем пространстве. Реестр помогает выбрать договор для проверки. В карточке можно изучить основание сигнала, этапы, приёмки, оплаты и подтверждающие документы.</p>
             </div>
             <aside class="marginalia">
               <div>
                 <h3>Моя роль</h3>
-                <p>Разрабатываю продукт с нуля с помощью AI-инструментов и напрямую работаю с заказчиком. В проекте сотрудничаю с дизайнером и специалистом по 1С. Продолжаю развивать систему по мере её использования.</p>
+                <p>Разрабатываю продукт с нуля с помощью AI-инструментов и напрямую работаю с заказчиком. Сотрудничаю с дизайнером и специалистом по&nbsp;1С. Развиваю систему по мере её использования.</p>
               </div>
               <div>
-                <h3>Уже сейчас</h3>
-                <p>Заказ на разработку оплачен. Продуктом пользуются несколько сотрудников. Следующий этап — измерить время работы с договором и объём ручной проверки.</p>
+                <h3>Статус</h3>
+                <p>Заказ на разработку оплачен. Системой пользуются несколько сотрудников заказчика. Следующий этап — измерить время работы с договором и объём ручной проверки.</p>
               </div>
             </aside>
           </div>
         </div>
       </div>
 
-      <ol class="sequence" data-reveal-group>
-        <li class="reveal-item">
-          <p class="seq-label"><span>01</span> Выбрать договор</p>
-          <article class="ui ui-shot">
-            <header class="ui-bar">
-              <span class="wordmark">Verifix</span>
-              <span class="ui-crumb">Реестр</span>
-            </header>
-            <div class="shot-list">
-              <div class="shot-row is-picked">
-                <span class="reg-id">14-СМР/24</span>
-                <span>Северная свая</span>
-                <span class="flag flag-attention">Требует внимания</span>
+      <div class="scope-block" data-reveal-group>
+        <h3 class="scope-title reveal-item">Как выбрали первый объём</h3>
+        <p class="scope-lede reveal-item">Исходный запрос охватывал несколько процессов: проверку компаний, работу с документами и контроль исполнения договоров. Для первого этапа выбрали мониторинг договоров: этапы, сроки и базовую проверку документов. Интеграции с&nbsp;1С и Госзакупками включили в первый этап — данные должны поступать из существующих источников.</p>
+        <ol class="scope-flow reveal-item" aria-label="Последовательность выбора объёма">
+          <li>
+            <span class="scope-step">01</span>
+            <strong>Исходная задача</strong>
+            <span>Несколько процессов у заказчика</span>
+          </li>
+          <li>
+            <span class="scope-step">02</span>
+            <strong>Первый объём</strong>
+            <span>Мониторинг договоров</span>
+          </li>
+          <li>
+            <span class="scope-step">03</span>
+            <strong>Обязательные интеграции</strong>
+            <span>1С и Госзакупки</span>
+          </li>
+        </ol>
+      </div>
+
+      <div class="carousel" data-carousel>
+        <div class="carousel-toolbar">
+          <p class="carousel-caption">Схема текущего сценария. Данные демонстрационные.</p>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-btn" data-carousel-prev aria-label="Предыдущий экран">←</button>
+            <p class="carousel-status" data-carousel-status aria-live="polite">1 из 3</p>
+            <button type="button" class="carousel-btn" data-carousel-next aria-label="Следующий экран">→</button>
+          </div>
+        </div>
+        <ol class="sequence" data-carousel-track tabindex="0" aria-label="Сценарий Verifix: реестр, сигнал, исполнение">
+          <li class="reveal-item" data-carousel-slide>
+            <p class="seq-label"><span>01</span> Выбрать договор</p>
+            <article class="ui ui-shot">
+              <header class="ui-bar">
+                <span class="wordmark">Verifix</span>
+                <span class="ui-crumb">Реестр</span>
+              </header>
+              <div class="shot-list">
+                <div class="shot-row is-picked">
+                  <span class="reg-id">14-СМР/24</span>
+                  <span>Северная свая</span>
+                  <span class="flag flag-attention">Требует внимания</span>
+                </div>
+                <div class="shot-row">
+                  <span class="reg-id">07-МТР/25</span>
+                  <span>Инерт-Ресурс</span>
+                  <span class="flag flag-gap">Нет данных</span>
+                </div>
+                <div class="shot-row">
+                  <span class="reg-id">22-ПИР/23</span>
+                  <span>Проектный контур</span>
+                  <span class="flag flag-clear">Без признаков</span>
+                </div>
+                <div class="shot-row dim">
+                  <span class="reg-id">03-СМР/25</span>
+                  <span>Монолит-Сервис</span>
+                  <span class="flag flag-attention">Требует внимания</span>
+                </div>
               </div>
-              <div class="shot-row">
-                <span class="reg-id">07-МТР/25</span>
-                <span>Инерт-Ресурс</span>
-                <span class="flag flag-gap">Нет данных</span>
+            </article>
+          </li>
+          <li class="reveal-item" data-carousel-slide>
+            <p class="seq-label"><span>02</span> Понять сигнал</p>
+            <article class="ui ui-shot">
+              <header class="ui-bar">
+                <span class="wordmark">Verifix</span>
+                <span class="ui-crumb">14-СМР/24</span>
+              </header>
+              <div class="shot-body">
+                <p class="shot-kicker">ООО «Северная свая» · этап 2</p>
+                <p class="flag flag-attention">Требует внимания</p>
+                <h3 class="shot-h">Основание сигнала</h3>
+                <p>В 1С зафиксирована оплата 18,4 млн от 12.03. В ЕИС нет документа приёмки за этап 2.</p>
+                <h3 class="shot-h">Чего не хватает</h3>
+                <ul class="gap-list">
+                  <li><span>КС-2 · март</span><span class="flag flag-gap">Нет данных</span></li>
+                  <li><span>КС-3 · март</span><span class="flag flag-gap">Нет данных</span></li>
+                </ul>
+                <p class="shot-note">Отсутствие документа — отдельный статус, не «риска нет».</p>
               </div>
-              <div class="shot-row">
-                <span class="reg-id">22-ПИР/23</span>
-                <span>Проектный контур</span>
-                <span class="flag flag-clear">Без признаков</span>
+            </article>
+          </li>
+          <li class="reveal-item" data-carousel-slide>
+            <p class="seq-label"><span>03</span> Проверить исполнение</p>
+            <article class="ui ui-shot">
+              <header class="ui-bar">
+                <span class="wordmark">Verifix</span>
+                <span class="ui-crumb">Исполнение</span>
+              </header>
+              <div class="shot-body">
+                <div class="exec-head">
+                  <span>Этап</span>
+                  <span>Приёмка</span>
+                  <span>Оплата</span>
+                </div>
+                <div class="exec-row">
+                  <span>1</span>
+                  <span>есть</span>
+                  <span class="num">9,8 млн</span>
+                </div>
+                <div class="exec-row is-hot">
+                  <span>2</span>
+                  <span>нет документа</span>
+                  <span class="num">18,4 млн</span>
+                </div>
+                <div class="exec-row">
+                  <span>3</span>
+                  <span class="muted">не начат</span>
+                  <span class="muted">—</span>
+                </div>
+                <h3 class="shot-h">Документы</h3>
+                <ul class="doc-list">
+                  <li>Договор <span>есть</span></li>
+                  <li>Доп. соглашение № 1 <span>есть</span></li>
+                  <li class="is-hot">КС-2 за март <span>не найден</span></li>
+                </ul>
               </div>
-              <div class="shot-row dim">
-                <span class="reg-id">03-СМР/25</span>
-                <span>Монолит-Сервис</span>
-                <span class="flag flag-attention">Требует внимания</span>
-              </div>
-            </div>
-          </article>
-        </li>
-        <li class="reveal-item">
-          <p class="seq-label"><span>02</span> Понять сигнал</p>
-          <article class="ui ui-shot">
-            <header class="ui-bar">
-              <span class="wordmark">Verifix</span>
-              <span class="ui-crumb">14-СМР/24</span>
-            </header>
-            <div class="shot-body">
-              <p class="shot-kicker">ООО «Северная свая» · этап 2</p>
-              <p class="flag flag-attention">Требует внимания</p>
-              <h3 class="shot-h">Основание сигнала</h3>
-              <p>В 1С зафиксирована оплата 18,4 млн от 12.03. В ЕИС нет документа приёмки за этап 2.</p>
-              <h3 class="shot-h">Чего не хватает</h3>
-              <ul class="gap-list">
-                <li><span>КС-2 · март</span><span class="flag flag-gap">Нет данных</span></li>
-                <li><span>КС-3 · март</span><span class="flag flag-gap">Нет данных</span></li>
-              </ul>
-              <p class="shot-note">Отсутствие документа — отдельный статус, не «риска нет».</p>
-            </div>
-          </article>
-        </li>
-        <li class="reveal-item">
-          <p class="seq-label"><span>03</span> Проверить исполнение</p>
-          <article class="ui ui-shot">
-            <header class="ui-bar">
-              <span class="wordmark">Verifix</span>
-              <span class="ui-crumb">Исполнение</span>
-            </header>
-            <div class="shot-body">
-              <div class="exec-head">
-                <span>Этап</span>
-                <span>Приёмка</span>
-                <span>Оплата</span>
-              </div>
-              <div class="exec-row">
-                <span>1</span>
-                <span>есть</span>
-                <span class="num">9,8 млн</span>
-              </div>
-              <div class="exec-row is-hot">
-                <span>2</span>
-                <span>нет документа</span>
-                <span class="num">18,4 млн</span>
-              </div>
-              <div class="exec-row">
-                <span>3</span>
-                <span class="muted">не начат</span>
-                <span class="muted">—</span>
-              </div>
-              <h3 class="shot-h">Документы</h3>
-              <ul class="doc-list">
-                <li>Договор <span>есть</span></li>
-                <li>Доп. соглашение № 1 <span>есть</span></li>
-                <li class="is-hot">КС-2 за март <span>не найден</span></li>
-              </ul>
-            </div>
-          </article>
-        </li>
-      </ol>
+            </article>
+          </li>
+        </ol>
+      </div>
 
       <div class="decisions-inline">
         <h3 class="decisions-kicker">Продуктовые решения</h3>
@@ -210,21 +268,20 @@
                 <li><i class="swatch swatch-attention"></i><span>Требует внимания</span><em>есть основание</em></li>
               </ul>
             </div>
-            <h3>Показывать, чего мы не знаем</h3>
-            <p>Отсутствие данных выделено в отдельный статус. Куратор видит разницу между отсутствием признаков риска и ситуацией, которую ещё нужно проверить.</p>
+            <h3>Показывать недостаток данных отдельным состоянием</h3>
+            <p>Отсутствие данных выделено отдельно. Сотрудник видит разницу между отсутствием признаков риска и ситуацией, которую ещё нужно проверить.</p>
           </article>
           <article class="exhibit exhibit-shift reveal-item">
             <div class="ui ui-frag" aria-hidden="true">
-              <p class="frag-kicker">Как собирается вывод</p>
+              <p class="frag-kicker">Выбор по источнику</p>
               <ol class="pipe">
-                <li><span>01</span>Правила <small>сверка сумм и этапов</small></li>
-                <li><span>02</span>Разбор данных <small>1С, ЕИС, файлы</small></li>
-                <li><span>03</span>AI <small>формулировка сигнала</small></li>
-                <li class="is-human"><span>04</span>Сотрудник <small>там, где нужен вывод</small></li>
+                <li><span>01</span>Структурированные данные <small>проверка правилами</small></li>
+                <li><span>02</span>Поддерживаемый XML <small>разбор парсером</small></li>
+                <li><span>03</span>Текстовые документы <small>извлечение с помощью AI</small></li>
               </ol>
             </div>
-            <h3>Подбирать способ обработки под задачу</h3>
-            <p>В Verifix работают вместе AI, обычные правила и разбор структурированных данных. Проверка сотрудником предусмотрена в тех сценариях, где она нужна.</p>
+            <h3>Выбирать способ обработки под задачу</h3>
+            <p>Способ зависит от источника. Проверка сотрудником включается в тех сценариях, где она нужна — не как обязательное подтверждение каждого результата во всей системе.</p>
           </article>
           <article class="exhibit reveal-item">
             <div class="ui ui-frag" aria-hidden="true">
@@ -238,129 +295,162 @@
                 </ul>
               </div>
             </div>
-            <h3>Учитывать существующий процесс</h3>
-            <p>Интеграции с 1С и ЕИС связывают реестр с данными, которые уже используются в работе. От сигнала можно перейти к сведениям и документам, на которых он основан.</p>
+            <h3>Учитывать существующий рабочий процесс</h3>
+            <p>Интеграции с&nbsp;1С и ЕИС связывают реестр с данными, которые уже используются в работе. От сигнала можно перейти к сведениям и документам, на которых он основан.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="docs" class="block case" aria-labelledby="docs-title">
+    <section id="matrix" class="block case" aria-labelledby="matrix-title">
       <div class="block-head">
-        <p class="index">04 · Распознавание документов</p>
+        <p class="index">04 · Matrix · Развитие фичи внутри Verifix</p>
         <div class="case-top">
-          <h2 id="docs-title">Из пачки файлов — в разобранный поток по типам</h2>
+          <h2 id="matrix-title">От списка файлов — к рабочей таблице по договору</h2>
           <div class="case-copy">
             <div class="prose">
-              <p>В операционных процессах документы приходят пачками: разные типы, разное качество сканов, ручная сортировка и перенос полей. Пока файлы не разобраны, следующий шаг в процессе не начинается.</p>
-              <p>Модуль принимает поток документов, определяет тип, извлекает нужные поля и отдаёт результат на проверку. Человек подключается там, где уверенности модели недостаточно — а не на каждом файле.</p>
+              <p><strong>Задача.</strong> В карточке договора накапливаются акты, платёжные документы, дополнительные соглашения и другие файлы. Сотруднику нужно найти конкретные сведения и сопоставить документы. Длинный список файлов не помогает быстро увидеть нужные данные.</p>
+              <p><strong>Подход.</strong> Предложила организовать документы по типам. Акты, платежи и претензии отвечают на разные вопросы, поэтому для них нужны разные наборы полей. Общие сведения — источник, номер, дата, сумма и статус разбора — связывают документы в единую рабочую таблицу.</p>
             </div>
             <aside class="marginalia">
               <div>
                 <h3>Моя роль</h3>
-                <p>Прорабатываю сценарий массового разбора: какие типы важны первыми, где автоматизация экономит время, где обязательна проверка сотрудником. Связываю распознавание с реальным рабочим процессом, а не с демо на идеальных файлах.</p>
+                <p>Уточнила пользовательский сценарий и пересмотрела структуру представления документов. Предложила группировать их по типам вместо этапов договора: в большинстве рассматриваемых договоров нескольких этапов нет. Уточнила нужные сведения — источник документа и состав работ — и предложила рассматривать претензии отдельно. Поддержала чат на уровне конкретного документа как направление развития.</p>
               </div>
               <div>
-                <h3>Зачем это клиенту</h3>
-                <p>Меньше ручной сортировки, быстрее доступ к данным в следующих системах, понятная граница: что модуль делает сам, а что остаётся на контроле.</p>
+                <h3>Статус</h3>
+                <p>Текущая версия развёрнута в production. Фича развивается.</p>
+              </div>
+              <div>
+                <h3>Ожидаемая польза</h3>
+                <p>Меньше ручного поиска по файлам и более удобное сопоставление сведений по договору.</p>
               </div>
             </aside>
           </div>
         </div>
       </div>
 
-      <ol class="sequence" data-reveal-group>
-        <li class="reveal-item">
-          <p class="seq-label"><span>01</span> Принять поток</p>
-          <article class="ui ui-shot">
-            <header class="ui-bar">
-              <span class="wordmark">Docs</span>
-              <span class="ui-crumb">Очередь</span>
-            </header>
-            <div class="shot-list">
-              <div class="shot-row is-picked">
-                <span class="reg-id">248</span>
-                <span>файлов в обработке</span>
-                <span class="flag flag-attention">идёт разбор</span>
+      <div class="carousel" data-carousel>
+        <div class="carousel-toolbar">
+          <p class="carousel-caption">Концепция сценария. Данные демонстрационные.</p>
+          <div class="carousel-controls">
+            <button type="button" class="carousel-btn" data-carousel-prev aria-label="Предыдущий экран">←</button>
+            <p class="carousel-status" data-carousel-status aria-live="polite">1 из 3</p>
+            <button type="button" class="carousel-btn" data-carousel-next aria-label="Следующий экран">→</button>
+          </div>
+        </div>
+        <ol class="sequence" data-carousel-track tabindex="0" aria-label="Концепция Matrix: тип, таблица, документ">
+          <li class="reveal-item" data-carousel-slide>
+            <p class="seq-label"><span>01</span> Выбрать тип документов</p>
+            <article class="ui ui-shot">
+              <header class="ui-bar">
+                <span class="wordmark">Matrix</span>
+                <span class="ui-crumb">Типы</span>
+              </header>
+              <div class="shot-body">
+                <p class="shot-kicker">Договор 14-СМР/24</p>
+                <ul class="gap-list">
+                  <li class="is-picked-row"><span>Акты</span><span class="num">12</span></li>
+                  <li><span>Платежи</span><span class="num">9</span></li>
+                  <li><span>Претензии</span><span class="num">2</span></li>
+                  <li><span>Прочее</span><span class="flag flag-gap">разобрать</span></li>
+                </ul>
+                <p class="shot-note">Группы по содержанию, а не длинный общий список.</p>
               </div>
-              <div class="shot-row">
-                <span class="reg-id">PDF</span>
-                <span>сканы и фото</span>
-                <span class="flag flag-clear">смешанный поток</span>
+            </article>
+          </li>
+          <li class="reveal-item" data-carousel-slide>
+            <p class="seq-label"><span>02</span> Сопоставить сведения</p>
+            <article class="ui ui-shot">
+              <header class="ui-bar">
+                <span class="wordmark">Matrix</span>
+                <span class="ui-crumb">Таблица · Акты</span>
+              </header>
+              <div class="shot-body">
+                <div class="matrix-head">
+                  <span>Источник</span>
+                  <span>Номер</span>
+                  <span>Дата</span>
+                  <span>Сумма</span>
+                </div>
+                <div class="matrix-row is-hot">
+                  <span>Файл</span>
+                  <span>КС-2</span>
+                  <span>01.09</span>
+                  <span class="num">12,4 млн</span>
+                </div>
+                <div class="matrix-row">
+                  <span>Файл</span>
+                  <span>КС-3</span>
+                  <span>01.09</span>
+                  <span class="num">12,4 млн</span>
+                </div>
+                <div class="matrix-row">
+                  <span>ЕИС</span>
+                  <span>Акт</span>
+                  <span>12.03</span>
+                  <span class="num">8,0 млн</span>
+                </div>
+                <p class="shot-note">Общие поля связывают документы; набор колонок зависит от типа.</p>
               </div>
-              <div class="shot-row">
-                <span class="reg-id">12</span>
-                <span>типов в модели</span>
-                <span class="flag flag-gap">приоритет — топ‑5</span>
+            </article>
+          </li>
+          <li class="reveal-item" data-carousel-slide>
+            <p class="seq-label"><span>03</span> Открыть исходник</p>
+            <article class="ui ui-shot">
+              <header class="ui-bar">
+                <span class="wordmark">Matrix</span>
+                <span class="ui-crumb">Документ</span>
+              </header>
+              <div class="shot-body">
+                <p class="shot-kicker">КС-2 · 01.09</p>
+                <h3 class="shot-h">Проверка</h3>
+                <ul class="doc-list">
+                  <li>Первоисточник <span>открыт</span></li>
+                  <li>Сумма в таблице <span>12,4 млн</span></li>
+                  <li>Состав работ <span>уточнить</span></li>
+                </ul>
+                <p class="shot-note">Таблица — для обзора; детали — на уровне файла.</p>
               </div>
-            </div>
+            </article>
+          </li>
+        </ol>
+      </div>
+
+      <div class="decisions-inline">
+        <h3 class="decisions-kicker">Продуктовые решения</h3>
+        <div class="exhibits exhibits-matrix" data-reveal-group>
+          <article class="exhibit reveal-item">
+            <h3>Группировать по содержанию</h3>
+            <p>У актов, платежей и претензий разные задачи. Группировка по типам позволяет показывать нужные для каждого типа сведения и не дублировать раздел этапов договора.</p>
           </article>
-        </li>
-        <li class="reveal-item">
-          <p class="seq-label"><span>02</span> Определить тип</p>
-          <article class="ui ui-shot">
-            <header class="ui-bar">
-              <span class="wordmark">Docs</span>
-              <span class="ui-crumb">Классификация</span>
-            </header>
-            <div class="shot-body">
-              <p class="shot-kicker">batch · 19.11</p>
-              <h3 class="shot-h">Результат по типам</h3>
-              <ul class="gap-list">
-                <li><span>Договор</span><span class="num">64</span></li>
-                <li><span>Акт / КС</span><span class="num">91</span></li>
-                <li><span>Счёт</span><span class="num">47</span></li>
-                <li><span>Не уверен</span><span class="flag flag-gap">на проверку</span></li>
-              </ul>
-              <p class="shot-note">«Не уверен» — отдельная очередь, не смешивается с распознанным.</p>
-            </div>
+          <article class="exhibit reveal-item">
+            <h3>Сначала — полезное представление данных</h3>
+            <p>В плане первый релиз строится на уже извлечённых сведениях. Чат, колонки-вопросы и подробный разбор состава работ выделены в следующие этапы развития.</p>
           </article>
-        </li>
-        <li class="reveal-item">
-          <p class="seq-label"><span>03</span> Отдать в процесс</p>
-          <article class="ui ui-shot">
-            <header class="ui-bar">
-              <span class="wordmark">Docs</span>
-              <span class="ui-crumb">Поля</span>
-            </header>
-            <div class="shot-body">
-              <p class="shot-kicker">Акт · уверенность 0,93</p>
-              <h3 class="shot-h">Извлечено</h3>
-              <ul class="doc-list">
-                <li>Номер <span>А-104/25</span></li>
-                <li>Дата <span>12.03.2025</span></li>
-                <li>Сумма <span>18,4 млн</span></li>
-                <li class="is-hot">Подпись <span>проверить</span></li>
-              </ul>
-              <p class="shot-note">Дальше — в учётную систему или на короткий human review.</p>
-            </div>
+          <article class="exhibit reveal-item">
+            <h3>Разделить обзор и уточнение</h3>
+            <p>Таблица предназначена для сопоставления документов по договору. Работа с конкретным файлом — отдельный уровень, где можно изучить первоисточник и уточнить детали.</p>
           </article>
-        </li>
-      </ol>
+        </div>
+      </div>
     </section>
 
     <section id="about" class="block about" aria-labelledby="about-title">
       <div class="block-head">
         <p class="index">05</p>
-        <h2 id="about-title">От понимания задачи до работающего продукта</h2>
-      </div>
-      <div class="about-grid">
-        <p class="margin-label">Кому полезна</p>
-        <p>Работодателям — как PM в AI и B2B: умею заземлить модель и автоматизацию в реальном процессе. Клиентам — как человек, который берёт сложную операционную задачу и доводит первый сценарий до использования.</p>
-        <p class="margin-label">Опыт</p>
-        <p>Продуктовый дизайн, UX-исследования, DesignOps и руководство командами. Корпоративные системы: GenAI-платформа ДаВинчи, BI, ERP, BPM. Сейчас усиливаю продуктовую роль на живых AI-кейсах.</p>
-        <p class="margin-label">Как работаю</p>
-        <p>Разбираюсь, как люди делают работу сегодня. Выбираю узкий первый сценарий. Собираю решение с AI-инструментами, дизайном и интеграциями. Смотрю, что реально используют — и только потом расширяю.</p>
+        <h2 id="about-title">Масштаб предыдущего опыта</h2>
+        <p class="block-lede">До Verifix — продуктовый дизайн, DesignOps и руководство дизайном в корпоративных системах. Сейчас усиливаю продуктовую роль на живых AI-кейсах.</p>
       </div>
 
       <div class="posts">
         <article class="post">
           <h3>ДаВинчи — корпоративная GenAI-платформа</h3>
-          <p>Работала над позиционированием, исследованиями, пользовательскими сценариями и интерфейсами. Организовывала взаимодействие дизайна, аналитики и фронтенда.</p>
+          <p>Работала над платформой примерно с 10&nbsp;000 пользователей: позиционированием, исследованиями, пользовательскими сценариями и интерфейсами. Организовывала взаимодействие дизайна, аналитики и фронтенда.</p>
         </article>
         <article class="post">
           <h3>DesignOps и руководство дизайном</h3>
-          <p>Руководила дизайн-командами, развивала UX-исследования и рабочие процессы. Работала со сложными корпоративными системами: BI, ERP и BPM.</p>
+          <p>Руководила работой 5 дизайнеров на 10 проектах. Развивала UX-исследования, профессиональный рост команды и рабочие процессы. Работала с корпоративными BI-, ERP- и BPM-системами.</p>
         </article>
       </div>
     </section>
@@ -368,19 +458,15 @@
     <section id="contact" class="contact" aria-labelledby="contact-title">
       <div class="contact-inner">
         <p class="index index-light">06</p>
-        <h2 id="contact-title">Нужен PM или AI-продукт под процесс?</h2>
-        <p class="contact-lede">Могу подключиться как Product Manager в команду — или как человек, который вместе с вами соберёт рабочий AI-сценарий: исследование процесса, продуктовая проработка, запуск в использование.</p>
-        <div class="contact-links">
-          <a id="link-telegram" href="#"><span>01</span>Написать в Telegram<strong aria-hidden="true">→</strong></a>
-          <a id="link-email" href="#"><span>02</span>Почта<strong aria-hidden="true">→</strong></a>
-          <a id="link-linkedin" href="#"><span>03</span>LinkedIn<strong aria-hidden="true">→</strong></a>
-          <a id="link-resume" href="#"><span>04</span>Резюме<strong aria-hidden="true">→</strong></a>
-        </div>
+        <h2 id="contact-title">Обсудим ваш продукт?</h2>
+        <p class="contact-lede">Ищу PM-роль в AI- или B2B-команде. Буду рада обсудить задачи, где полезны мой опыт исследований, продуктового дизайна и разработки с AI-инструментами.</p>
+        <p class="contact-extra">Также открыта к проектной работе над автоматизацией рабочих процессов.</p>
+        <div class="contact-links" id="contact-links" hidden></div>
         <p class="contact-sign">Юлия Карло</p>
       </div>
     </section>
   </main>
 
-  <script src="main.js?v=9"></script>
+  <script src="main.js?v=17"></script>
 </body>
 </html>
