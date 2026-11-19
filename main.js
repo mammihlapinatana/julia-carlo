@@ -19,17 +19,8 @@ const spineLinks = [...document.querySelectorAll(".spine a")];
 const sections = [...document.querySelectorAll("main section")];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
-function placeMark(link) {
-  if (!mark || !link) return;
-  const horizontal = window.matchMedia("(max-width: 720px)").matches;
-  if (horizontal) {
-    const left = link.offsetLeft + link.offsetWidth / 2 - mark.offsetWidth / 2;
-    const top = link.offsetTop + link.offsetHeight / 2 - mark.offsetHeight / 2;
-    mark.style.transform = `translate3d(${left}px, ${top}px, 0)`;
-    return;
-  }
-  const top = link.offsetTop + link.offsetHeight / 2 - mark.offsetHeight / 2;
-  mark.style.transform = `translate3d(12px, ${top}px, 0)`;
+function placeMark() {
+  /* Active state is handled by .is-on styles; floating mark is unused. */
 }
 
 function setActive(id) {
@@ -41,7 +32,6 @@ function setActive(id) {
     else item.removeAttribute("aria-current");
   });
   document.body.classList.toggle("at-contact", id === "contact");
-  placeMark(link);
 }
 
 function currentSectionId() {
@@ -60,8 +50,7 @@ function syncActive() {
 
 function stickyOffset() {
   if (!spine) return 0;
-  const horizontal = window.matchMedia("(max-width: 720px)").matches;
-  return horizontal ? spine.getBoundingClientRect().height + 8 : 0;
+  return spine.getBoundingClientRect().height + 8;
 }
 
 function scrollToId(id) {
@@ -209,10 +198,6 @@ window.addEventListener("scroll", () => {
   });
 }, { passive: true });
 
-window.addEventListener("resize", () => {
-  const current = spineLinks.find((item) => item.classList.contains("is-on"));
-  placeMark(current || spineLinks[0]);
-});
 
 spine?.addEventListener("click", (event) => {
   const link = event.target.closest("a");
@@ -236,8 +221,6 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     history.replaceState(null, "", `#${id}`);
   });
 });
-
-if (reduceMotion) mark?.style.setProperty("transition", "none");
 
 document.fonts?.ready.then(() => {
   document.body.classList.add("is-ready");
