@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Юлия Карло — AI-продукты для сложных рабочих процессов</title>
+  <meta name="description" content="Юлия Карло создаёт AI-продукты для сложных рабочих процессов. Сейчас — Verifix: контроль исполнения договоров для строительной СРО.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;600;700&family=Martian+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css?v=3">
+</head>
+<body>
+  <a class="skip" href="#hero">К содержанию</a>
+
+  <nav class="spine" aria-label="Разделы">
+    <span class="spine-mark" aria-hidden="true"></span>
+    <a href="#hero" data-index="0">01</a>
+    <a href="#case" data-index="1">02</a>
+    <a href="#decisions" data-index="2">03</a>
+    <a href="#experience" data-index="3">04</a>
+    <a href="#about" data-index="4">05</a>
+    <a href="#contact" data-index="5">06</a>
+  </nav>
+
+  <main>
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="brand reveal" style="--d:0">Юлия Карло</p>
+        <p class="eyebrow reveal" style="--d:1">
+          <span>AI-продукты</span>
+          <span>B2B</span>
+        </p>
+        <h1 id="hero-title" class="reveal" style="--d:2">
+          <span>Создаю AI-продукты</span>
+          <span>для сложных</span>
+          <span>рабочих процессов</span>
+        </h1>
+        <p class="lede reveal" style="--d:3">Соединяю исследования, продуктовый дизайн и разработку с AI. Сейчас создаю Verifix — инструмент, который помогает сотрудникам строительной СРО контролировать исполнение договоров и видеть, что требует внимания.</p>
+        <p class="actions reveal" style="--d:4">
+          <a class="action" href="#case">Смотреть Verifix <span aria-hidden="true">→</span></a>
+          <a class="action action-quiet" href="#contact">Связаться</a>
+        </p>
+        <p class="footnote reveal" style="--d:5">Рассматриваю роли Product Manager в AI-продуктах и B2B-платформах.</p>
+      </div>
+
+      <div class="hero-stage reveal-stage">
+        <div class="ui ui-hero">
+          <header class="ui-bar">
+            <span class="wordmark">Verifix</span>
+            <span class="ui-crumb">Реестр договоров</span>
+            <span class="ui-meta">куратор · СРО</span>
+          </header>
+          <div class="ui-filters" aria-hidden="true">
+            <span class="filter is-current">Все</span>
+            <span class="filter">Требуют внимания</span>
+            <span class="filter">Нет данных</span>
+            <span class="ui-count">2 сигнала</span>
+          </div>
+          <div class="reg-head" aria-hidden="true">
+            <span>Договор</span>
+            <span>Сигнал</span>
+          </div>
+          <div class="reg" role="listbox" aria-label="Реестр договоров" tabindex="0">
+            <button type="button" class="reg-row is-on" role="option" aria-selected="true">
+              <span class="reg-line">
+                <span class="reg-id">14-СМР/24</span>
+                <span class="reg-party">ООО «Северная свая»</span>
+                <span class="flag flag-attention">Требует внимания</span>
+              </span>
+              <span class="reg-sub">
+                <span>ЖК «Маршала», корп. 3</span>
+                <span class="num">48,2 млн</span>
+                <span class="src src-ok">1С</span>
+                <span class="src src-gap">ЕИС</span>
+              </span>
+              <span class="reg-detail-wrap">
+                <span class="reg-detail">Оплата без приёмки. В 1С есть платёж 18,4 млн от 12 марта. В ЕИС нет приёмки этапа 2. Не хватает КС-2 и КС-3.</span>
+              </span>
+            </button>
+            <button type="button" class="reg-row" role="option" aria-selected="false">
+              <span class="reg-line">
+                <span class="reg-id">07-МТР/25</span>
+                <span class="reg-party">АО «Инерт-Ресурс»</span>
+                <span class="flag flag-gap">Нет данных</span>
+              </span>
+              <span class="reg-sub">
+                <span>Школа № 14, бетон</span>
+                <span class="num">12,6 млн</span>
+                <span class="src src-ok">1С</span>
+                <span class="src src-gap">ЕИС</span>
+              </span>
+              <span class="reg-detail-wrap">
+                <span class="reg-detail">ЕИС не вернула закрывающие документы. Это ещё не риск: для вывода не хватает сведений.</span>
+              </span>
+            </button>
+            <button type="button" class="reg-row" role="option" aria-selected="false">
+              <span class="reg-line">
+                <span class="reg-id">22-ПИР/23</span>
+                <span class="reg-party">ООО «Проектный контур»</span>
+                <span class="flag flag-clear">Без признаков риска</span>
+              </span>
+              <span class="reg-sub">
+                <span>Мост через Ижору</span>
+                <span class="num">6,4 млн</span>
+                <span class="src src-ok">1С</span>
+                <span class="src src-ok">ЕИС</span>
+              </span>
+              <span class="reg-detail-wrap">
+                <span class="reg-detail">Суммы, этапы и акты сходятся. Отдельных признаков риска нет.</span>
+              </span>
+            </button>
+            <button type="button" class="reg-row" role="option" aria-selected="false">
+              <span class="reg-line">
+                <span class="reg-id">03-СМР/25</span>
+                <span class="reg-party">АО «Монолит-Сервис»</span>
+                <span class="flag flag-attention">Требует внимания</span>
+              </span>
+              <span class="reg-sub">
+                <span>Насосная станция</span>
+                <span class="num">91,0 млн</span>
+                <span class="src src-gap">1С</span>
+                <span class="src src-ok">ЕИС</span>
+              </span>
+              <span class="reg-detail-wrap">
+                <span class="reg-detail">Акт приёмки этапа есть в ЕИС. В 1С нет соответствующей оплаты.</span>
+              </span>
+            </button>
+            <button type="button" class="reg-row" role="option" aria-selected="false">
+              <span class="reg-line">
+                <span class="reg-id">18-УСЛ/24</span>
+                <span class="reg-party">ИП Ковалёв А. С.</span>
+                <span class="flag flag-gap">Нет данных</span>
+              </span>
+              <span class="reg-sub">
+                <span>Авторский надзор</span>
+                <span class="num">2,1 млн</span>
+                <span class="src src-ok">1С</span>
+                <span class="src src-gap">ЕИС</span>
+              </span>
+              <span class="reg-detail-wrap">
+                <span class="reg-detail">Договор из 1С не найден в ЕИС. Пока нельзя отличить ошибку связи от отсутствия публикации.</span>
+              </span>
+            </button>
+            <button type="button" class="reg-row" role="option" aria-selected="false">
+              <span class="reg-line">
+                <span class="reg-id">11-СМР/24</span>
+                <span class="reg-party">ООО «Балтфундамент»</span>
+                <span class="flag flag-clear">Без признаков риска</span>
+              </span>
+              <span class="reg-sub">
+                <span>Причал 4</span>
+                <span class="num">33,7 млн</span>
+                <span class="src src-ok">1С</span>
+                <span class="src src-ok">ЕИС</span>
+              </span>
+              <span class="reg-detail-wrap">
+                <span class="reg-detail">Этап закрыт, оплаты и приёмки совпадают, претензий в документах нет.</span>
+              </span>
+            </button>
+          </div>
+          <footer class="ui-foot">Пример договоров — чтобы было видно, как читаются сигнал и отсутствие данных. Стрелки вверх и вниз переключают строку.</footer>
+        </div>
+      </div>
+    </section>
+
+    <section id="case" class="block case" aria-labelledby="case-title">
+      <div class="block-head">
+        <p class="index">02</p>
+        <div class="case-top">
+          <h2 id="case-title">Какие договоры требуют внимания — и почему</h2>
+          <div class="case-copy">
+            <div class="prose">
+              <p>Чтобы проверить исполнение договора, куратору СРО нужно сопоставить сведения из 1С, ЕИС и документов. Важно понять, где есть риск, а где для вывода пока не хватает данных.</p>
+              <p>Verifix собирает эти сведения в одном рабочем пространстве. Реестр помогает выбрать договор для проверки. В карточке можно изучить основание сигнала, этапы, приёмки, оплаты и подтверждающие документы.</p>
+            </div>
+            <aside class="marginalia">
+              <div>
+                <h3>Моя роль</h3>
+                <p>Разрабатываю продукт с нуля с помощью AI-инструментов и напрямую работаю с заказчиком. В проекте сотрудничаю с дизайнером и специалистом по 1С. Продолжаю развивать систему по мере её использования.</p>
+              </div>
+              <div>
+                <h3>Уже сейчас</h3>
+                <p>Заказ на разработку оплачен. Продуктом пользуются несколько сотрудников. Следующий этап — измерить время работы с договором и объём ручной проверки.</p>
+              </div>
+            </aside>
+          </div>
+        </div>
+      </div>
+
+      <ol class="sequence" data-reveal-group>
+        <li class="reveal-item">
+          <p class="seq-label"><span>01</span> Выбрать договор</p>
+          <article class="ui ui-shot">
+            <header class="ui-bar">
+              <span class="wordmark">Verifix</span>
+              <span class="ui-crumb">Реестр</span>
+            </header>
+            <div class="shot-list">
+              <div class="shot-row is-picked">
+                <span class="reg-id">14-СМР/24</span>
+                <span>Северная свая</span>
+                <span class="flag flag-attention">Требует внимания</span>
+              </div>
+              <div class="shot-row">
+                <span class="reg-id">07-МТР/25</span>
+                <span>Инерт-Ресурс</span>
+                <span class="flag flag-gap">Нет данных</span>
+              </div>
+              <div class="shot-row">
+                <span class="reg-id">22-ПИР/23</span>
+                <span>Проектный контур</span>
+                <span class="flag flag-clear">Без признаков</span>
+              </div>
+              <div class="shot-row dim">
+                <span class="reg-id">03-СМР/25</span>
+                <span>Монолит-Сервис</span>
+                <span class="flag flag-attention">Требует внимания</span>
+              </div>
+            </div>
+          </article>
+        </li>
+        <li class="reveal-item">
+          <p class="seq-label"><span>02</span> Понять сигнал</p>
+          <article class="ui ui-shot">
+            <header class="ui-bar">
+              <span class="wordmark">Verifix</span>
+              <span class="ui-crumb">14-СМР/24</span>
+            </header>
+            <div class="shot-body">
+              <p class="shot-kicker">ООО «Северная свая» · этап 2</p>
+              <p class="flag flag-attention">Требует внимания</p>
+              <h3 class="shot-h">Основание сигнала</h3>
+              <p>В 1С зафиксирована оплата 18,4 млн от 12.03. В ЕИС нет документа приёмки за этап 2.</p>
+              <h3 class="shot-h">Чего не хватает</h3>
+              <ul class="gap-list">
+                <li><span>КС-2 · март</span><span class="flag flag-gap">Нет данных</span></li>
+                <li><span>КС-3 · март</span><span class="flag flag-gap">Нет данных</span></li>
+              </ul>
+              <p class="shot-note">Отсутствие документа — отдельный статус, не «риска нет».</p>
+            </div>
+          </article>
+        </li>
+        <li class="reveal-item">
+          <p class="seq-label"><span>03</span> Проверить исполнение</p>
+          <article class="ui ui-shot">
+            <header class="ui-bar">
+              <span class="wordmark">Verifix</span>
+              <span class="ui-crumb">Исполнение</span>
+            </header>
+            <div class="shot-body">
+              <div class="exec-head">
+                <span>Этап</span>
+                <span>Приёмка</span>
+                <span>Оплата</span>
+              </div>
+              <div class="exec-row">
+                <span>1</span>
+                <span>есть</span>
+                <span class="num">9,8 млн</span>
+              </div>
+              <div class="exec-row is-hot">
+                <span>2</span>
+                <span>нет документа</span>
+                <span class="num">18,4 млн</span>
+              </div>
+              <div class="exec-row">
+                <span>3</span>
+                <span class="muted">не начат</span>
+                <span class="muted">—</span>
+              </div>
+              <h3 class="shot-h">Документы</h3>
+              <ul class="doc-list">
+                <li>Договор <span>есть</span></li>
+                <li>Доп. соглашение № 1 <span>есть</span></li>
+                <li class="is-hot">КС-2 за март <span>не найден</span></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <section id="decisions" class="block" aria-labelledby="decisions-title">
+      <div class="block-head">
+        <p class="index">03</p>
+        <h2 id="decisions-title">Продуктовые решения внутри Verifix</h2>
+      </div>
+      <div class="exhibits" data-reveal-group>
+        <article class="exhibit reveal-item">
+          <div class="ui ui-frag" aria-hidden="true">
+            <p class="frag-kicker">Статус в реестре</p>
+            <ul class="status-sample">
+              <li><i class="swatch swatch-clear"></i><span>Без признаков риска</span><em>сведения сошлись</em></li>
+              <li><i class="swatch swatch-gap"></i><span>Нет данных</span><em>вывод рано делать</em></li>
+              <li><i class="swatch swatch-attention"></i><span>Требует внимания</span><em>есть основание</em></li>
+            </ul>
+          </div>
+          <h3>Показывать, чего мы не знаем</h3>
+          <p>Отсутствие данных выделено в отдельный статус. Куратор видит разницу между отсутствием признаков риска и ситуацией, которую ещё нужно проверить.</p>
+        </article>
+        <article class="exhibit exhibit-shift reveal-item">
+          <div class="ui ui-frag" aria-hidden="true">
+            <p class="frag-kicker">Как собирается вывод</p>
+            <ol class="pipe">
+              <li><span>01</span>Правила <small>сверка сумм и этапов</small></li>
+              <li><span>02</span>Разбор данных <small>1С, ЕИС, файлы</small></li>
+              <li><span>03</span>AI <small>формулировка сигнала</small></li>
+              <li class="is-human"><span>04</span>Сотрудник <small>там, где нужен вывод</small></li>
+            </ol>
+          </div>
+          <h3>Подбирать способ обработки под задачу</h3>
+          <p>В Verifix работают вместе AI, обычные правила и разбор структурированных данных. Проверка сотрудником предусмотрена в тех сценариях, где она нужна.</p>
+        </article>
+        <article class="exhibit reveal-item">
+          <div class="ui ui-frag" aria-hidden="true">
+            <p class="frag-kicker">От сигнала к источнику</p>
+            <div class="trace">
+              <p class="trace-top">Оплата без приёмки</p>
+              <ul>
+                <li><span>1С</span>платёж 18,4 млн · 12.03</li>
+                <li><span>ЕИС</span>приёмка этапа 2 · нет</li>
+                <li><span>Док</span>КС-2 · не найден</li>
+              </ul>
+            </div>
+          </div>
+          <h3>Учитывать существующий процесс</h3>
+          <p>Интеграции с 1С и ЕИС связывают реестр с данными, которые уже используются в работе. От сигнала можно перейти к сведениям и документам, на которых он основан.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="block" aria-labelledby="experience-title">
+      <div class="block-head">
+        <p class="index">04 · Дополнительный опыт</p>
+        <h2 id="experience-title">Корпоративные продукты и команды</h2>
+      </div>
+      <div class="posts">
+        <article class="post">
+          <h3>ДаВинчи — корпоративная GenAI-платформа</h3>
+          <p>Работала над позиционированием, исследованиями, пользовательскими сценариями и интерфейсами. Организовывала взаимодействие дизайна, аналитики и фронтенда.</p>
+        </article>
+        <article class="post">
+          <h3>DesignOps и руководство дизайном</h3>
+          <p>Руководила дизайн-командами, развивала UX-исследования и рабочие процессы. Работала со сложными корпоративными системами: BI, ERP и BPM.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="about" class="block about" aria-labelledby="about-title">
+      <div class="block-head">
+        <p class="index">05</p>
+        <h2 id="about-title">От понимания задачи до работающего продукта</h2>
+      </div>
+      <div class="about-grid">
+        <p class="margin-label">Опыт</p>
+        <p>Мой опыт — продуктовый дизайн, UX-исследования и управление командами. Сейчас развиваюсь в Product Management с фокусом на AI и B2B.</p>
+        <p class="margin-label">Как работаю</p>
+        <p>Мне интересны задачи, где нужно разобраться в работе людей, выбрать полезный первый сценарий и довести его до использования. В Verifix соединяю этот опыт с разработкой и прямой работой с заказчиком.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="contact-inner">
+        <p class="index index-light">06</p>
+        <h2 id="contact-title">Ищете PM для AI- или B2B-продукта?</h2>
+        <p class="contact-lede">Буду рада обсудить вашу задачу. Могу быть полезна в исследованиях рабочих процессов, продуктовой проработке и создании решений с AI.</p>
+        <div class="contact-links">
+          <a id="link-telegram" href="#"><span>01</span>Написать в Telegram<strong aria-hidden="true">→</strong></a>
+          <a id="link-email" href="#"><span>02</span>Почта<strong aria-hidden="true">→</strong></a>
+          <a id="link-linkedin" href="#"><span>03</span>LinkedIn<strong aria-hidden="true">→</strong></a>
+          <a id="link-resume" href="#"><span>04</span>Резюме<strong aria-hidden="true">→</strong></a>
+        </div>
+        <p class="contact-sign">Юлия Карло</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="main.js?v=3"></script>
+</body>
+</html>
