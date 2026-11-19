@@ -262,20 +262,24 @@ h1 span { display: block; }
   min-width: 0;
   min-height: 100svh;
   position: relative;
-  background:
-    linear-gradient(90deg, var(--paper), transparent 36px),
-    radial-gradient(120% 80% at 100% 0%, #eef0d8 0%, transparent 55%),
-    linear-gradient(180deg, #eceee6 0%, var(--sheet) 42%, #f2f3ec 100%);
+  overflow: hidden;
+  background: #2a2c2b;
 }
 
-.hero-stage::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto 0 0;
-  width: 1px;
-  background: var(--line);
-  z-index: 1;
-  pointer-events: none;
+.portrait {
+  margin: 0;
+  height: 100%;
+  min-height: 100svh;
+}
+
+.portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 100svh;
+  object-fit: cover;
+  object-position: 50% 18%;
+  filter: contrast(1.04) saturate(0.92);
 }
 
 .ui {
@@ -284,10 +288,8 @@ h1 span { display: block; }
   height: 100%;
   display: flex;
   flex-direction: column;
-  border-left: 1px solid var(--line);
+  border: 1px solid var(--line);
 }
-
-.ui-hero { min-height: 100svh; }
 
 .ui-bar {
   display: flex;
@@ -506,7 +508,100 @@ h2 {
   max-width: 16ch;
 }
 
+.block-lede {
+  margin-top: 18px;
+  max-width: 42em;
+  font-size: 1.08rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.case-index {
+  margin-top: 42px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  max-width: 1180px;
+}
+
+.case-tile {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 28px 28px 24px;
+  text-decoration: none;
+  border-top: 1px solid var(--ink);
+  background:
+    linear-gradient(180deg, rgba(225, 232, 90, 0.16), transparent 42%),
+    var(--sheet);
+  min-height: 280px;
+  transition: background 180ms ease, transform 180ms ease;
+}
+
+.case-tile:hover {
+  background:
+    linear-gradient(180deg, rgba(225, 232, 90, 0.28), transparent 48%),
+    var(--sheet);
+}
+
+.case-tile-meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+  color: var(--faint);
+}
+
+.case-tile-meta span {
+  color: var(--ink);
+  margin-right: 0.6em;
+}
+
+.case-tile h3 {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.case-tile-title {
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  max-width: 14em;
+}
+
+.case-tile > p:not(.case-tile-meta):not(.case-tile-title) {
+  color: var(--muted);
+  font-size: 0.98rem;
+  max-width: 34em;
+  flex: 1;
+}
+
+.case-tile-go {
+  margin-top: 18px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--ink);
+  align-self: flex-start;
+  padding-bottom: 2px;
+}
+
 .case-top { max-width: 1180px; }
+
+.decisions-inline {
+  margin-top: clamp(56px, 10vh, 96px);
+}
+
+.decisions-kicker {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--faint);
+  margin-bottom: 18px;
+}
 
 .case-copy {
   margin-top: 36px;
@@ -584,7 +679,6 @@ h2 {
   height: auto;
   min-height: 420px;
   border: 1px solid var(--line);
-  border-left-width: 1px;
 }
 
 .shot-list { padding-top: 4px; }
@@ -955,13 +1049,24 @@ h2 {
 
 @media (max-width: 1080px) {
   .hero { grid-template-columns: 1fr; }
-  .hero-stage, .ui-hero { min-height: 0; }
-  .ui-hero { height: min(78svh, 760px); border-left: 0; border-top: 1px solid var(--line); }
-  .hero-copy { justify-content: flex-start; padding-top: 36px; padding-bottom: 28px; }
+  .hero-stage {
+    min-height: 0;
+    order: -1;
+  }
+  .portrait,
+  .portrait img {
+    min-height: min(72svh, 720px);
+    height: min(72svh, 720px);
+  }
+  .portrait img { object-position: 50% 12%; }
+  .hero-copy { justify-content: flex-start; padding-top: 28px; padding-bottom: 28px; }
   .brand { max-width: 12ch; }
   h1 { max-width: 16ch; }
   .reveal-stage { transform: translate3d(0, 20px, 0); }
-  .case-copy, .exhibits, .about-grid { grid-template-columns: 1fr; }
+  .case-index,
+  .case-copy,
+  .exhibits,
+  .about-grid { grid-template-columns: 1fr; }
   .exhibit-shift { margin-top: 0; }
   .sequence {
     display: flex;

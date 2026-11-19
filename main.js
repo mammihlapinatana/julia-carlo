@@ -10,8 +10,6 @@ const spine = document.querySelector(".spine");
 const mark = document.querySelector(".spine-mark");
 const spineLinks = [...document.querySelectorAll(".spine a")];
 const sections = [...document.querySelectorAll("main section")];
-const reg = document.querySelector(".reg");
-const rows = [...document.querySelectorAll(".reg-row")];
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 function placeMark(link) {
@@ -51,44 +49,6 @@ function currentSectionId() {
 
 function syncActive() {
   setActive(currentSectionId());
-}
-
-function selectRow(row, focus) {
-  rows.forEach((item) => {
-    const on = item === row;
-    item.classList.toggle("is-on", on);
-    item.setAttribute("aria-selected", on ? "true" : "false");
-  });
-  if (focus) row.focus({ preventScroll: true });
-}
-
-rows.forEach((row) => {
-  row.addEventListener("click", () => selectRow(row, false));
-});
-
-reg?.addEventListener("keydown", (event) => {
-  const current = rows.findIndex((row) => row.classList.contains("is-on"));
-  if (event.key !== "ArrowDown" && event.key !== "ArrowUp") return;
-  event.preventDefault();
-  const next = event.key === "ArrowDown"
-    ? Math.min(rows.length - 1, current + 1)
-    : Math.max(0, current - 1);
-  selectRow(rows[next], true);
-});
-
-function demoRegistry() {
-  if (reduceMotion || rows.length < 3) return;
-  const path = [0, 1, 3, 0];
-  let step = 0;
-  const tick = () => {
-    if (document.hidden) return;
-    if (reg?.matches(":hover") || reg?.contains(document.activeElement)) return;
-    step += 1;
-    if (step >= path.length) return;
-    selectRow(rows[path[step]], false);
-    window.setTimeout(tick, 1100);
-  };
-  window.setTimeout(tick, 1400);
 }
 
 const revealObserver = new IntersectionObserver(
@@ -148,7 +108,6 @@ if (reduceMotion) mark?.style.setProperty("transition", "none");
 document.fonts?.ready.then(() => {
   document.body.classList.add("is-ready");
   syncActive();
-  demoRegistry();
 });
 
 requestAnimationFrame(() => {
