@@ -107,41 +107,41 @@ body.at-contact .spine a.is-on { color: #f3f3ee; }
 .hero {
   min-height: 100svh;
   display: grid;
-  grid-template-columns: minmax(340px, 1.12fr) minmax(420px, 0.88fr);
-  padding-left: var(--spine);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+  align-items: center;
+  gap: clamp(24px, 3.5vw, 48px);
+  padding: clamp(28px, 5vh, 48px) var(--pad) clamp(28px, 5vh, 48px) var(--spine);
+  background: var(--paper);
 }
 
 .hero-copy {
-  padding: 28px 48px 32px var(--pad);
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   position: relative;
   z-index: 2;
-  background: var(--paper);
   min-width: 0;
 }
 
+.claim {
+  margin: 0;
+  font-size: clamp(2.2rem, 3.6vw, 3.7rem);
+  font-weight: 600;
+  letter-spacing: -0.035em;
+  line-height: 0.98;
+  max-width: 14ch;
+}
+
+.claim span { display: block; }
+
 .brand {
-  margin: 0 0 10px;
-  font-size: clamp(2.4rem, 4.2vw, 4.2rem);
+  margin: 0;
+  font-size: clamp(1.6rem, 2.4vw, 2.1rem);
   font-weight: 700;
-  letter-spacing: -0.045em;
-  line-height: 0.92;
-}
-
-.eyebrow {
-  margin: 0 0 28px;
-  font-family: var(--mono);
-  font-size: 12px;
-  letter-spacing: 0.01em;
-  color: var(--muted);
-}
-
-.eyebrow span + span::before {
-  content: "·";
-  margin: 0 0.55em;
-  color: var(--faint);
+  letter-spacing: -0.035em;
+  line-height: 1.05;
+  color: var(--ink);
 }
 
 .reveal {
@@ -191,16 +191,6 @@ body.is-ready .reveal-stage {
 [data-reveal-group] .reveal-item:nth-child(3) { transition-delay: 180ms; }
 
 h1, h2, h3, p { margin: 0; }
-
-h1 {
-  font-size: clamp(2.2rem, 3.6vw, 3.7rem);
-  font-weight: 600;
-  letter-spacing: -0.035em;
-  line-height: 0.98;
-  max-width: 14ch;
-}
-
-h1 span { display: block; }
 
 .lede {
   margin-top: 28px;
@@ -260,26 +250,45 @@ h1 span { display: block; }
 
 .hero-stage {
   min-width: 0;
-  min-height: 100svh;
-  position: relative;
-  overflow: hidden;
-  background: #2a2c2b;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.portrait {
+.portrait-plate {
   margin: 0;
-  height: 100%;
-  min-height: 100svh;
+  width: min(100%, 360px);
+  background: var(--sheet);
+  border: 1px solid var(--ink);
 }
 
-.portrait img {
+.portrait-plate img {
   display: block;
   width: 100%;
-  height: 100%;
-  min-height: 100svh;
+  aspect-ratio: 3 / 4;
+  height: auto;
   object-fit: cover;
-  object-position: 50% 18%;
-  filter: contrast(1.04) saturate(0.92);
+  object-position: center 14%;
+}
+
+.portrait-plate figcaption {
+  padding: 16px 18px 18px;
+  border-top: 3px solid var(--mark);
+}
+
+.plate-focus {
+  margin-top: 8px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.plate-role {
+  margin-top: 6px;
+  font-size: 0.98rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 .ui {
@@ -1048,20 +1057,21 @@ h2 {
 }
 
 @media (max-width: 1080px) {
-  .hero { grid-template-columns: 1fr; }
-  .hero-stage {
+  .hero {
+    grid-template-columns: 1fr;
+    align-items: start;
     min-height: 0;
+    padding-top: 24px;
+  }
+  .hero-stage {
     order: -1;
+    justify-content: stretch;
+    align-items: stretch;
   }
-  .portrait,
-  .portrait img {
-    min-height: min(72svh, 720px);
-    height: min(72svh, 720px);
-  }
-  .portrait img { object-position: 50% 12%; }
-  .hero-copy { justify-content: flex-start; padding-top: 28px; padding-bottom: 28px; }
-  .brand { max-width: 12ch; }
-  h1 { max-width: 16ch; }
+  .hero-stage { justify-content: center; }
+  .portrait-plate { width: min(100%, 320px); margin: 0 auto; }
+  .hero-copy { justify-content: flex-start; padding-top: 8px; }
+  .claim { max-width: 16ch; }
   .reveal-stage { transform: translate3d(0, 20px, 0); }
   .case-index,
   .case-copy,
@@ -1104,11 +1114,14 @@ h2 {
   }
   .spine-mark { left: 12px; }
   .block, .contact, .hero { padding-left: 16px; padding-right: 16px; }
+  .hero { padding-top: 16px; padding-bottom: 28px; gap: 20px; }
   .hero-copy { padding-left: 0; padding-right: 0; }
-  .brand { font-size: clamp(2.2rem, 11vw, 3.2rem); }
-  h1 span { display: inline; }
-  h1 span:not(:last-child)::after { content: " "; }
-  h1 { max-width: none; font-size: clamp(1.85rem, 7.5vw, 2.5rem); }
+  .claim span { display: inline; }
+  .claim span:not(:last-child)::after { content: " "; }
+  .claim { max-width: none; font-size: clamp(1.85rem, 7.5vw, 2.5rem); }
+  .portrait-plate { width: min(72vw, 280px); }
+  .portrait-plate figcaption { padding: 14px 14px 16px; }
+  .brand { font-size: 1.45rem; }
   .contact-links { grid-template-columns: 1fr; }
   .contact-links a:nth-child(odd),
   .contact-links a:nth-child(even) {
